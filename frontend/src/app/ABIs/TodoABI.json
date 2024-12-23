@@ -1,0 +1,70 @@
+[
+    {
+      "type": "impl",
+      "name": "TodoContractImpl",
+      "interface_name": "contracts::ITodo"
+    },
+    {
+      "type": "enum",
+      "name": "core::bool",
+      "variants": [
+        {
+          "name": "False",
+          "type": "()"
+        },
+        {
+          "name": "True",
+          "type": "()"
+        }
+      ]
+    },
+    {
+      "type": "struct",
+      "name": "contracts::Todo",
+      "members": [
+        {
+          "name": "title",
+          "type": "core::felt252"
+        },
+        {
+          "name": "isDone",
+          "type": "core::bool"
+        }
+      ]
+    },
+    {
+      "type": "interface",
+      "name": "contracts::ITodo",
+      "items": [
+        {
+          "type": "function",
+          "name": "add_todo",
+          "inputs": [
+            {
+              "name": "_title",
+              "type": "core::felt252"
+            }
+          ],
+          "outputs": [],
+          "state_mutability": "external"
+        },
+        {
+          "type": "function",
+          "name": "get_all_todos",
+          "inputs": [],
+          "outputs": [
+            {
+              "type": "core::array::Array::<contracts::Todo>"
+            }
+          ],
+          "state_mutability": "view"
+        }
+      ]
+    },
+    {
+      "type": "event",
+      "name": "contracts::TodoContract::Event",
+      "kind": "enum",
+      "variants": []
+    }
+  ]
